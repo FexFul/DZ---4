@@ -18,9 +18,9 @@ namespace DZ___4
         static void WriteInConsoleSplitSentence(String[] splitSentence)
         {
             Console.WriteLine("Разделённое предложение: ");
-            foreach (String sentence in splitSentence)
+            foreach (String word in splitSentence)
             {
-                System.Console.WriteLine($"{sentence} ");
+                System.Console.WriteLine($"{word} ");
             }
         }
 
