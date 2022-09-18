@@ -9,27 +9,25 @@ namespace DZ___4._2
     internal class Program
     {
 
-        static String[] GetSplitString(String sentence)
+        static void reversWords(String sentence)
         {
-
             String[] sentenceArray = sentence.Split(' ');
-            return sentenceArray;
+            writeInConsoleReversSentence(sentenceArray);
         }
 
-        static void WriteInConsoleReversSentence(String[] splitSentence)
+        static void writeInConsoleReversSentence(String[] splitSentence)
         {
             Console.WriteLine("Разделённое предложение: ");
             for (int i = (splitSentence.Length - 1); i >= 0; i--)
             {
-                System.Console.Write($"{splitSentence[i]} ");
+                Console.Write($"{splitSentence[i]} ");
             }
         }
 
         static void Main(string[] args)
         {
             Console.WriteLine("Введите предложение для разделения: ");
-            WriteInConsoleReversSentence(GetSplitString(Console.ReadLine()));
-
+            reversWords(Console.ReadLine()); // Разделяем предложение и выводим в обратном порядке в отдельную строку каждое слово
 
             Console.ReadLine();
         }

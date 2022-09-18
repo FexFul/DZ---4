@@ -8,27 +8,25 @@ namespace DZ___4
 {
     internal class Program
     {
-        static String[] GetSplitString(String sentence)
+        static void getSplitString(String sentence)
         {
-
             String[] sentenceArray = sentence.Split(' ');
-            return sentenceArray;
+            writeInConsoleSplitSentence(sentenceArray);
         }
 
-        static void WriteInConsoleSplitSentence(String[] splitSentence)
+        static void writeInConsoleSplitSentence(String[] splitSentence)
         {
             Console.WriteLine("Разделённое предложение: ");
             foreach (String word in splitSentence)
             {
-                System.Console.WriteLine($"{word} ");
+                Console.WriteLine($"{word} ");
             }
         }
 
         static void Main(string[] args)
         {
             Console.WriteLine("Введите предложение для разделения: ");
-            WriteInConsoleSplitSentence(GetSplitString(Console.ReadLine()));
-
+            getSplitString(Console.ReadLine()); // Разделяем предложение и выводим в отдельную строку каждое слово
 
             Console.ReadLine();
         }
